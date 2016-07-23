@@ -1,0 +1,6 @@
+tcp://iot.eclipse.org:1883
+LLRP_1
+ASD
+admin
+xSX7I43pznk=
+iot.eclipse.org

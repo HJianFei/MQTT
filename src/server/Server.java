@@ -18,8 +18,8 @@ public class Server {
 
 	private MqttClient client;
 	private MqttTopic topic;
-	private String userName = "admin";
-	private String passWord = "password";
+//	private String userName = "admin";
+//	private String passWord = "password";
 
 	private MqttMessage message;
 
@@ -31,9 +31,9 @@ public class Server {
 
 	private void connect() {
 		MqttConnectOptions options = new MqttConnectOptions();
-		options.setCleanSession(false);
-		options.setUserName(userName);
-		options.setPassword(passWord.toCharArray());
+		options.setCleanSession(true);
+//		options.setUserName(userName);
+//		options.setPassword(passWord.toCharArray());
 		// 设置超时时间
 		options.setConnectionTimeout(10);
 		// 设置会话心跳时间
@@ -55,7 +55,7 @@ public class Server {
 
 	public static void main(String[] args) throws MqttException {
 		Server server = new Server();
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 2; i++) {
 		server.message = new MqttMessage();
 		server.message.setQos(2);
 		server.message.setRetained(true);
