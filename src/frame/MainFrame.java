@@ -107,8 +107,11 @@ public class MainFrame extends javax.swing.JFrame {
 		label_text.setForeground(new java.awt.Color(255, 0, 0));
 		label_text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		label_text.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-		jLabel.setIcon(new ImageIcon(System.getProperty("user.dir")
-				+ "\\image\\login.jpg"));
+		// jLabel.setIcon(new ImageIcon(System.getProperty("user.dir")
+		// + "\\image\\login.jpg"));
+		jLabel.setIcon(new ImageIcon(MainFrame.class
+				.getResource("/image/login.jpg")));
+		// MySample.class.getgetResource("/pic/index.png")
 		jMenu3.setText("系统设置");
 
 		option_menu.setText("参数设置");
@@ -221,9 +224,8 @@ public class MainFrame extends javax.swing.JFrame {
 		// TODO add your handling code here:
 		URL musicUrl;
 		try {
-			musicUrl = new URL("file:"
-					+ System.getProperty("user.dir").toString()
-					+ "\\music\\qq-4.mid");
+			musicUrl = new URL(MainFrame.class.getResource("/music/qq-4.mid")
+					+ "");
 			ac = Applet.newAudioClip(musicUrl);
 			ac.play();
 			ac.loop();
@@ -234,10 +236,10 @@ public class MainFrame extends javax.swing.JFrame {
 
 		InputStreamReader isr;
 		try {
-			System.out.println(System.getProperty("user.dir")
-					+ "\\files\\myFile.txt");
+			// System.out.println(MainFrame.class.getResource("/files/Myfile.txt")
+			// + "");
 			isr = new InputStreamReader(new FileInputStream(
-					System.getProperty("user.dir") + "\\files\\myFile.txt"),
+					MainFrame.class.getResource("/files/Myfile.txt") + ""),
 					"utf-8");
 			BufferedReader read = new BufferedReader(isr);
 			String s = null;
@@ -271,7 +273,7 @@ public class MainFrame extends javax.swing.JFrame {
 			throws Exception {
 		String urlNameString = "http://" + list.get(5)
 				+ ":8080/cargosys/app/baseInfo/getWarnInfo";
-//		System.out.println(urlNameString);
+		// System.out.println(urlNameString);
 		URL realUrl = new URL(urlNameString);
 		// 打开和URL之间的连接
 		URLConnection connection = realUrl.openConnection();

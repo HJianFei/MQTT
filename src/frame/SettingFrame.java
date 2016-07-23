@@ -345,8 +345,8 @@ public class SettingFrame extends javax.swing.JFrame {
 		String content = host + "\n" + topic + "\n" + client_name + "\n"
 				+ userName + "\n" + pad + "\n" + server_ip;
 		try {
-			file = new File(System.getProperty("user.dir")
-					+ "\\files\\myFile.txt");
+//			System.out.println(SettingFrame.class.getResource("/files/Myfile.txt") + "");
+			file = new File(SettingFrame.class.getResource("/files/Myfile.txt") + "");
 			fop = new FileOutputStream(file); // if file doesnt exists, then
 												// create it
 			if (!file.exists()) {
