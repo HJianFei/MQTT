@@ -10,6 +10,7 @@ import java.applet.AudioClip;
 import java.awt.Desktop;
 import java.awt.Toolkit;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
@@ -222,13 +223,14 @@ public class MainFrame extends javax.swing.JFrame {
 
 	private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_startActionPerformed
 		// TODO add your handling code here:
+		// startMusic();
 		URL musicUrl;
 		try {
-			musicUrl = new URL(MainFrame.class.getResource("/music/qq-4.mid")
+			musicUrl = new URL(MainFrame.class.getResource("/music/PP11.MID")
 					+ "");
 			ac = Applet.newAudioClip(musicUrl);
-			ac.play();
-			ac.loop();
+			// ac.play();
+			// ac.loop();
 		} catch (MalformedURLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -271,25 +273,13 @@ public class MainFrame extends javax.swing.JFrame {
 
 	private void btn_lookActionPerformed(java.awt.event.ActionEvent evt)
 			throws Exception {
-		String urlNameString = "http://" + list.get(5)
-				+ ":8080/cargosys/app/baseInfo/getWarnInfo";
-		// System.out.println(urlNameString);
-		URL realUrl = new URL(urlNameString);
-		// 打开和URL之间的连接
-		URLConnection connection = realUrl.openConnection();
-		// 建立实际的连接
-		connection.connect();
-		if (connection.getContent() != null) {
-			Desktop desktop = Desktop.getDesktop();
-			String uri = "http://" + list.get(5)
-					+ ":8080/cargosys/pc/loginToWarn?u=" + list.get(3) + "&pd="
-					+ list.get(4);
-			desktop.browse(new URI(uri));
-			btn_look.setEnabled(false);
-			ac.stop();
-		} else {
-			ac.stop();
-		}
+		Desktop desktop = Desktop.getDesktop();
+		String uri = "http://" + list.get(5)
+				+ ":8080/cargosys/pc/loginToWarn?u=" + list.get(3) + "&pd="
+				+ list.get(4);
+		desktop.browse(new URI(uri));
+		btn_look.setEnabled(false);
+		ac.stop();
 
 	}
 

@@ -47,6 +47,7 @@ public class PushCallback implements MqttCallback {
 		// new WarnFrame().setVisible(true);
 		ac.play();
 		ac.loop();
+//		System.out.println("½øÀ´ÁË");
 		btn_look.setEnabled(true);
 		
 		btn_look.setBackground(Color.RED);
