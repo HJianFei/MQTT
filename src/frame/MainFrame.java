@@ -10,13 +10,11 @@ import java.applet.AudioClip;
 import java.awt.Desktop;
 import java.awt.Toolkit;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +33,7 @@ public class MainFrame extends javax.swing.JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+//	private AudioClip clip;
 
 	/**
 	 * Creates new form MainFrame
@@ -226,9 +225,11 @@ public class MainFrame extends javax.swing.JFrame {
 		// startMusic();
 		URL musicUrl;
 		try {
-			musicUrl = new URL(MainFrame.class.getResource("/music/PP11.MID")
+			musicUrl = new URL(MainFrame.class.getResource("/music/warn.mid")
 					+ "");
 			ac = Applet.newAudioClip(musicUrl);
+//			clip = java.applet.Applet.newAudioClip(musicUrl);
+
 			// ac.play();
 			// ac.loop();
 		} catch (MalformedURLException e1) {
@@ -238,8 +239,6 @@ public class MainFrame extends javax.swing.JFrame {
 
 		InputStreamReader isr;
 		try {
-			// System.out.println(MainFrame.class.getResource("/files/Myfile.txt")
-			// + "");
 			isr = new InputStreamReader(new FileInputStream(
 					MainFrame.class.getResource("/files/Myfile.txt") + ""),
 					"utf-8");

@@ -49,7 +49,7 @@ public class PushCallback implements MqttCallback {
 		ac.loop();
 //		System.out.println("½øÀ´ÁË");
 		btn_look.setEnabled(true);
-		
+//		ChangeColorUtil.changeColor(true, btn_look);
 		btn_look.setBackground(Color.RED);
 	}
 
