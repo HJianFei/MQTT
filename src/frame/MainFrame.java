@@ -107,11 +107,9 @@ public class MainFrame extends javax.swing.JFrame {
 		label_text.setForeground(new java.awt.Color(255, 0, 0));
 		label_text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		label_text.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-		// jLabel.setIcon(new ImageIcon(System.getProperty("user.dir")
-		// + "\\image\\login.jpg"));
+
 		jLabel.setIcon(new ImageIcon(MainFrame.class
 				.getResource("/image/login.jpg")));
-		// MySample.class.getgetResource("/pic/index.png")
 		jMenu3.setText("系统设置");
 
 		option_menu.setText("参数设置");
@@ -228,10 +226,7 @@ public class MainFrame extends javax.swing.JFrame {
 			musicUrl = new URL(MainFrame.class.getResource("/music/warn.mid")
 					+ "");
 			ac = Applet.newAudioClip(musicUrl);
-//			clip = java.applet.Applet.newAudioClip(musicUrl);
 
-			// ac.play();
-			// ac.loop();
 		} catch (MalformedURLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

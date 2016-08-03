@@ -43,13 +43,9 @@ public class PushCallback implements MqttCallback {
 	@Override
 	public void messageArrived(String topic, MqttMessage message)
 			throws Exception {
-		// subscribe后得到的消息会执行到这里面
-		// new WarnFrame().setVisible(true);
 		ac.play();
 		ac.loop();
-//		System.out.println("进来了");
 		btn_look.setEnabled(true);
-//		ChangeColorUtil.changeColor(true, btn_look);
 		btn_look.setBackground(Color.RED);
 	}
 
