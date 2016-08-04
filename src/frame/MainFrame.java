@@ -33,7 +33,8 @@ public class MainFrame extends javax.swing.JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-//	private AudioClip clip;
+
+	// private AudioClip clip;
 
 	/**
 	 * Creates new form MainFrame
@@ -226,7 +227,6 @@ public class MainFrame extends javax.swing.JFrame {
 			musicUrl = new URL(MainFrame.class.getResource("/music/warn.mid")
 					+ "");
 			ac = Applet.newAudioClip(musicUrl);
-
 		} catch (MalformedURLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
